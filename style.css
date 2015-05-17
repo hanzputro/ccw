@@ -802,54 +802,9 @@ div.footer__wrapper .footer nav.footerbar--nav ul.footerbar--ul li.footerbar--li
 
 /** responsive **/
 /* (0px above)----------- */
-@media only screen and (min-width: 0px) {
-  .footer__wrapper {
-    position: relative;
-    height: initial;
-  }
-  .footer__wrapper .footer {
-    width: 90%;
-  }
-
-  li.footerbar--li {
-    float: left;
-    width: 50%;
-    margin: 0 0 20px 0;
-  }
-
-  li.footerbar--li:last-child {
-    float: right;
-    width: 100%;
-  }
-}
 /* (480px above)----------- */
 /* (768px above)----------- */
-@media only screen and (min-width: 768px) {
-  li.footerbar--li {
-    float: left;
-    width: 18%;
-  }
-
-  li.footerbar--li:first-child {
-    margin: 0 6% 0 0;
-  }
-
-  li.footerbar--li:last-child {
-    float: right;
-    width: 55%;
-  }
-}
 /* (1024px above)----------- */
-@media only screen and (min-width: 1024px) {
-  .footer__wrapper {
-    display: inline-table;
-    position: absolute;
-    height: 259px;
-  }
-  .footer__wrapper .footer {
-    width: 950px;
-  }
-}
 /* (1360px above)----------- */
 /* (1900px above)----------- */
 button, input[type="submit"] {
