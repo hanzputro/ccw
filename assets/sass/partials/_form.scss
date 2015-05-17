@@ -1,0 +1,179 @@
+form {	
+}
+
+input,form,select,textarea {
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	&[disabled] {
+		opacity: .5;
+		cursor: not-allowed;
+	}
+}
+input, textarea,select {
+	max-width: 100%;
+	background-color:#fff;
+	color:#555;		
+	padding:4px 5px;
+	border: 1px solid #a9a9a9;
+	vertical-align: middle;
+	font-size:16px;
+	// font-style: italic;
+	// letter-spacing:1px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 		
+	&:active,&:focus {
+		outline:none;
+	}
+	option{
+		color:#959595;
+		background:rgba(237,237,237,0.9);
+		border-top:0;
+		border-right:0;
+		border-left:0;
+		border-bottom:1px solid rgba(235,235,235,0.9);
+		border-radius:4px;
+	}
+}
+
+//////// form style
+form{
+	.form__wrapper{
+		&.form__wrapper--comment{
+			input{
+				float:left;
+				width:49%;
+				margin:0 2% 15px 0;
+				&:last-child{
+					margin:0 0 15px 0;
+				}
+			}
+			textarea{
+				width:100%;
+			}
+		}
+		label{
+			position:relative;
+			float:left;
+			// width:30%;
+			// height:40px;
+			margin:0 3% 0 0;
+			padding:10px 0 0 0;
+			font-family: 'avantgardef';
+			font-size:16px;
+			letter-spacing: 1px;
+			color:#676765;
+			// text-shadow:
+			//     0 0 0px #d1d1d0, 0 0 0px #d1d1d0, 
+			//     0 0 0px #d1d1d0, 0 0 0px #d1d1d0,
+			//     0 0 0px #d1d1d0, 0 0 0px #d1d1d0; 
+			&:before{
+				content:":";
+				position:absolute;
+				right:0;
+
+			}
+			&.verify{
+				font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+				font-size: 16px;
+				float:none;
+				width:initial;
+				padding:20px 0 0 10px !important;
+				&:before{
+					display:none;
+				}
+			}		
+		}		
+		input{
+			// width:67%;
+			height:40px;
+			margin:0 0 15px 0;
+			&.error{
+				border:2px solid #c6202b;
+			}
+		}
+		textarea{
+			// width:67%;
+			margin:0 0 15px 0;
+			padding: 10px 5px !important;
+			&.error{
+				border:2px solid #c6202b;
+			}
+		}
+	}	
+}
+#respond{
+	position:relative;
+	padding:45px 0 0 0;
+	font-size: 16px;
+}
+.error{
+	position: absolute;
+	width:100%;
+	top:0;
+	left:0;
+    padding: 5px 0;
+    border-bottom: 1px solid red;
+    text-align: right;
+    color: red;    
+}
+.success{
+    position: absolute;
+	width:100%;
+	top:0;
+	left:0;
+    padding: 5px 0;
+    border-bottom: 1px solid green;
+    text-align: right;
+    color: green;
+}
+form span{
+    color: red;
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+	label{
+		width:100%;
+	}
+	label, input, textarea{
+		width:100%;
+	}
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+	label{
+		width:30%;
+		height:40px;
+	}
+	input, textarea{
+		width:67%;
+	}
+	input[type="submit"]{
+		width:initial;
+	}
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+}
+
+/* (1024px above)----------- */
+@media only screen
+and (min-width : 1024px) {
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {  
+}
+
+/* (1440px above)----------- */
+@media only screen 
+and (min-width : 1440px) { 
+}

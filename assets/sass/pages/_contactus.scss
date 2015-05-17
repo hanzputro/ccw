@@ -1,0 +1,66 @@
+
+// contactus page
+.contactus{
+	display: block;
+	.contactus__left{
+		float:left;
+		// width:39%;
+		margin:0 4% 0 0;
+		img.contactus__left--img{
+			min-width:100%;
+		}
+	}
+	.contactus__right{
+		float:left;
+		// width:57%;
+		text-align:left;
+		p{
+			letter-spacing: 0.9px;
+		}
+	}
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+	.contactus__left{
+		display: none;
+	}
+	.contactus__right{
+		width:100%;
+	}
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+	.contactus__left{
+		display: inline-block;
+		width:44%;
+	}
+	.contactus__right{
+		width:52%;
+	}
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1900px above)----------- */
+@media only screen 
+and (min-width : 1900px) {
+}

@@ -1,0 +1,97 @@
+
+// header 
+   
+.header__wrapper{
+  width: 100%;  
+  // margin:0 auto;
+  padding:0;
+  text-align: center;
+}
+
+.header{
+  display: inline-block;
+  width:960px;
+  margin:15px auto;
+  padding:0;
+  .header__left{
+    float:left;
+  }
+  .header__right{
+    padding:10px 0 0 0;
+    float:right;
+  }
+}
+
+nav{
+  text-align:right;
+  clear:both;
+  ul.menu__sosmed--ul{
+    display: inline-block;
+    margin:0 0;
+    li{
+      float:left;
+      margin:0px 4px 0 0;
+      a{
+
+      }
+    }
+  }
+  ul.menubar--ul{
+    @extend .menu__sosmed--ul;
+    margin:8px 0 0 0;
+    li{
+      margin:0px 0 0 40px;
+    }
+  }
+}
+
+.responsive__wrapper{
+  position: relative;
+  cursor:pointer;
+  padding:5px 10px;
+  background:#eee;
+  text-align:left;
+  &:before{
+    content:"";
+    position:absolute;
+    top:11px;
+    right:10px;
+    background:url("assets/images/menu-icon.png") no-repeat;
+    width:18px;
+    height:11px;
+  }
+}
+
+.menu-header-menu-container{
+
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+  .responsive__wrapper{
+    display: none;
+  }
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1440px above)----------- */
+@media only screen 
+and (min-width : 1900px) {
+}
