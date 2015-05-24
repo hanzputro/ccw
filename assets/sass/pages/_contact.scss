@@ -1,0 +1,90 @@
+
+// contactus page
+
+#map-canvas {
+	width:100%;
+	height: 100%;
+	// width:306px;
+	// height: 216px;
+	margin: 0px;
+	padding: 0px;
+}
+/* only for chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    /* Safari and Chrome, if Chrome rule needed */
+    #map-canvas {
+		width:319px;
+		height:264px;
+	}
+    /* Safari 5+ ONLY */
+    ::i-block-chrome, #map-canvas {
+		width:100%;
+		height: 100%;
+    }
+}
+
+.contact{
+	@include flex();
+  	text-align:left;
+  	padding:20px 0 40px 0;
+	.contact__left{
+	}
+	.contact__right{
+		// width:57%;
+		text-align:left;
+		.map__wrapper{
+			@include flex();
+			.map{
+				width:50%;
+			}
+			.map__desc{
+				width:48%;
+			}
+		}
+	}
+}
+
+/** responsive **/
+
+/* (0px above)----------- */
+@media only screen 
+and (min-width : 0px) {
+	.contact__left{
+		display: none;
+	}
+	.contact__right{
+		width:100%;
+	}
+}
+
+/* (480px above)----------- */
+@media only screen 
+and (min-width : 480px) {
+}
+
+/* (768px above)----------- */
+@media only screen 
+and (min-width : 768px) {
+	.contact__left{
+		display: inline-block;
+		width:30%;
+	}
+	.contact__right{
+		width:70%;
+	}
+}
+
+/* (1024px above)----------- */
+@media only screen 
+and (min-width : 1024px) {
+}
+
+/* (1360px above)----------- */
+@media only screen 
+and (min-width : 1360px) {
+}
+
+/* (1900px above)----------- */
+@media only screen 
+and (min-width : 1900px) {
+}

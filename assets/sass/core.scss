@@ -6,9 +6,9 @@
 @import "modules/fonts";
 
 // partials
+@import "partials/mixin";
 @import "partials/typography";
 @import "partials/form";
-@import "partials/mixin";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/button";
@@ -16,10 +16,8 @@
 
 // page
 @import "pages/home";
-@import "pages/portfolio";
-@import "pages/information";
-@import "pages/contactus";
-@import "pages/blog";
+@import "pages/ccw";
+@import "pages/contact";
 
 // vendor
 @import "vendor/flexslider";

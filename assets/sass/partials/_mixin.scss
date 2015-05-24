@@ -30,6 +30,24 @@
   -webkit-box-align:center;
 }
 
+// display flex
+@mixin flex(){
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+  -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+
+   // -webkit-justify-content: flex-start;
+   // justify-content: flex-start;
+
+   -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
 
 // column
 @mixin column($columncount:0, $columgap:0%, $columnwidth:0%){

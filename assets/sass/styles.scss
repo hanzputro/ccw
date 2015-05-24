@@ -24,7 +24,7 @@ a, a:active, a:focus, input, p, article, button {
 outline: none;
 }
 img{
-  width: 100%;
+  max-width: 100%;
   height: auto;
   // min-width: 100%; height:auto;
   border:0; outline:none;
@@ -67,7 +67,7 @@ html {
 }
 body {  
   // display: initial;
-  background:#fffffe;
+  background:#fff;
   margin:0;
   padding:0;
   // height:100%;
@@ -81,15 +81,19 @@ body {
   overflow:hidden;
   background:url(assets/images/strip_line.jpg) repeat-x;
   margin:0 auto;
-  padding:0 0 70px 0;
+  padding:0 0 90px 0;
   text-align: center;
   z-index:1; 
 }
 
 div.container__main{
-  text-align: center;  
     .main__wrapper{   
     }
+}
+.main{
+  // width: 910px;  
+  margin-right:auto;
+  margin-left:auto;
 }
 
 /** responsive **/
@@ -98,7 +102,10 @@ div.container__main{
 @media only screen 
 and (min-width : 0px) {
   .container{
-    width:90%;
+    width:100%;
+  }
+  .main{
+    width: 90%;
   }
 }
 
@@ -116,6 +123,9 @@ and (min-width : 768px) {
 and (min-width : 1024px) {
   .container{
     width:100%;
+  }
+  .main{
+    width: 910px;
   }
 }
 

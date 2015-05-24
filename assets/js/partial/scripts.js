@@ -35,25 +35,15 @@ $(document).ready(function(){
         $(link).fadeToggle();
     });
 
-    //////////// social media share
-    var popupCenter = function(url, title, w, h) {
-        // Fixes dual-screen position                         Most browsers      Firefox
-        var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;
-        var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;
-
-        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-
-        var left = ((width / 2) - (w / 2)) + dualScreenLeft;
-        var top = ((height / 3) - (h / 3)) + dualScreenTop;
-
-        var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
-
-        // Puts focus on the newWindow
-        if (window.focus) {
-            newWindow.focus();
-        }
-    };
+    //////////// tab ccw
+    $(".tablink--ul li:first").addClass("tablink--li--active");
+    $(".tablink--ul li a").click(function(event) {
+        event.preventDefault();
+        $(this).closest('li').addClass("tablink--li--active").siblings().removeClass("tablink--li--active");
+        var tab = $(this).attr("href");
+        $(".tabcontent").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
 
     ///////////// option themes
     $('.all_options').slideUp();
@@ -72,4 +62,23 @@ $(document).ready(function(){
     }
     $(this).parent().next('.all_options').slideToggle('slow');
     });
+
+    ///////////// map
+    function initialize() {
+        var myLatlng = new google.maps.LatLng(-6.183137, 106.8249);
+        var mapOptions = {
+            zoom: 15,
+            center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'ARTOTEL'
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
 });

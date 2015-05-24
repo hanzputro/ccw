@@ -22,39 +22,17 @@
 	<!-- <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png"> -->
 	<!-- Custom css -->
 	<!-- <link type="text/css" rel="stylesheet" href="assets/css/styles.css"/> -->
-		
-
 	<?php wp_head(); ?>
 </head>
 
 <body>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
-	<div id="fb-root"></div>	
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/id_ID/sdk.js#xfbml=1&version=v2.3&appId=1444827365810566";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<!-- <?php body_class(); ?> -->
-	<!-- overlay blur -->
-	<!-- <div class="overlay__blur"></div> -->
-	<!-- menu header responsive -->
-	<!-- <div id="hamburger--icon">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-	</div> -->
 
 	<div class="container">
 
 		<div class="header__wrapper">
-			<div class="header">
+			<div class="header main">
 				<div class="header__left">
-					<a href="index.php"><img class="logo__header" src="<?php bloginfo('template_url'); ?>/assets/images/logo.png"></img></a>
+					<a href="<?php echo site_url(); ?>"><img class="logo__header" src="<?php bloginfo('template_url'); ?>/assets/images/logo.png"></img></a>
 				</div>
 				<div class="header__right">
 					<nav>
@@ -66,18 +44,17 @@
 						</ul>
 					</nav>	
 					<nav>
-						<ul class="menubar--ul">
-							<!-- <li class=""><a href="index.php" class=""><h3>Home</h3></a></li> -->
-							<li class=""><a href="#" class=""><h3>Creative City Worship</h3></a></li>
-							<li class=""><a href="#" class=""><h3>Media</h3></a></li>
-							<li class=""><a href="#" class=""><h3>Ministry</h3></a></li>
-							<li class=""><a href="contact.php" class=""><h3>Contact</h3></a></li>
-						</ul>
-					</nav>					
+						<!-- <ul class="menubar--ul">
+							<li class=""><a href="#" class="">Creative City Worship</a></li>
+							<li class=""><a href="#" class="">Media</a></li>
+							<li class=""><a href="#" class="">Ministry</a></li>
+							<li class=""><a href="contact.php" class="">Contact</a></li>
+						</ul> -->
+						<?php wp_nav_menu( array('menu' => 'New Menu' )); ?>
+					</nav>
 				</div>
 				<!-- <div class="responsive__wrapper">
 					<p class="ag">MENU</p>
-				</div>
-				<?php wp_nav_menu( array('menu' => 'New Menu' )); ?>	 -->
+				</div> -->
 			</div>			
 		</div>

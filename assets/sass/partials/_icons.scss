@@ -1,103 +1,11 @@
 /* icons */
 
-.social-icons-wrap{
-    float:right;
+.ico_vision{
+    display: inline-block;
+    width:124px;
+    height:88px;
+    background: url('assets/images/vision.png') no-repeat;
 }
-.social-icons {
-    margin:0;
-    li {
-        position:relative;
-        list-style-type: none !important;
-        float:left;
-        height:20px !important;
-        margin:0 5px 0 0;
-        font-size: 10px !important;
-        font-weight: bold !important;
-        &:last-child {
-            margin-right: 0 !important;
-        }
-        a{
-            padding: 3px 15px 3px 15px;
-            // -webkit-border-top-left-radius: 3px;
-            // border-top-left-radius: 3px;
-            // -webkit-border-bottom-left-radius: 3px;
-            // border-bottom-left-radius: 3px;
-            font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
-            text-decoration: none;
-        }
-    } 
-}
-
-// .share-count {
-//     position: absolute;
-//     top: 0;
-//     right: 0;    
-//     padding: 4px 10px;
-//     margin-right:-27px;
-//     border-left: 0 !important;
-//     // -webkit-border-top-right-radius: 3px;
-//     // border-top-right-radius: 3px;
-//     // -webkit-border-bottom-right-radius: 3px;
-//     // border-bottom-right-radius: 3px;    
-//     font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
-// }
- 
-// /* Facebook Button Styling */
-// li.social-icon.facebook{
-//     a {
-//         border-top: 1px solid #3b5998;
-//         border-left: 1px solid #3b5998;
-//         border-bottom: 1px solid #3b5998;
-//         background-color: #3b5998;
-//         color: white; //#3b5998;        
-//         &:hover {
-//             // background-color: #3b5998;
-//             // color: white;
-//         }
-//     }
-//     span{
-//         border: 1px solid #3b5998;
-//         color: #3b5998;
-//     }
-// }
- 
-// /* Twitter Button Styling */
-// li.social-icon.twitter{
-//     a {
-//         border-top: 1px solid #55acee;
-//         border-left: 1px solid #55acee;
-//         border-bottom: 1px solid #55acee;
-//         background-color: #55acee;
-//         color: white; //#55acee;
-//         &:hover {
-//             // background-color: #55acee;
-//             // color: white;
-//         }
-//     }
-//     span{
-//         border: 1px solid #55acee;
-//         color: #55acee;
-//     }
-// }
- 
-// /* Google+ Button Styling */
-// li.social-icon.google-plus{
-//     a {
-//         border-top: 1px solid #dd4b39;
-//         border-left: 1px solid #dd4b39;
-//         border-bottom: 1px solid #dd4b39;
-//         color: white; //#dd4b39;
-//         background-color: #dd4b39;
-//         &:hover {
-//             // background-color: #dd4b39;
-//             // color: white;
-//         } 
-//     }
-//     span{
-//         border: 1px solid #dd4b39;
-//         color: #dd4b39;
-//     }
-// }
 
 /** responsive **/
 /* (0px above)----------- */

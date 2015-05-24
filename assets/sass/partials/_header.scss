@@ -4,21 +4,19 @@
 .header__wrapper{
   width: 100%;  
   // margin:0 auto;
-  padding:0;
+  margin-top:5px;
+  padding:0 0 5px 0;
   text-align: center;
+  background:#f9f9f9;
 }
 
 .header{
-  display: inline-block;
-  width:960px;
-  margin:15px auto;
-  padding:0;
+  @include flex();
+  padding:15px 0 5px 0;
   .header__left{
-    float:left;
   }
   .header__right{
     padding:10px 0 0 0;
-    float:right;
   }
 }
 
@@ -36,11 +34,35 @@ nav{
       }
     }
   }
-  ul.menubar--ul{
+  ul.menubar--ul,
+  #menu-header-menu{
     @extend .menu__sosmed--ul;
     margin:8px 0 0 0;
     li{
-      margin:0px 0 0 40px;
+      margin:0px 0 0 40px !important;
+      a{
+        position:relative;
+        @include delay(0.3s all);
+        text-align: center;
+        @extend h3;
+        &:before{
+          @include delay(0.3s all);
+          opacity:0;
+          width:0%;
+          content:"";
+          position:absolute;
+          bottom:-4px;
+          left:0;
+          border-bottom:3px solid #aaa;
+        }                
+        &:hover{
+          &:before{
+            opacity:1;
+            width:100%;
+            border-bottom:3px solid #aaa;
+          } 
+        }
+      }
     }
   }
 }

@@ -46,7 +46,8 @@ add_action( 'admin_menu', 'add_settings_page' );
 /* ----------------------------------------------------------
 Declare vars
 ------------------------------------------------------------- */
-$themename = "Theme Name";
+// $themename = "Theme Name";
+$themename = "";
 $shortname = "shortname";
 $categories = get_categories('hide_empty=0&orderby=name');
 $all_cats = array();
@@ -63,50 +64,203 @@ $theme_options = array (
   /* ---------------------------------------------------------
   General section
   ----------------------------------------------------------- */
-  array( "name" => "General",
-  "type" => "section"),
-  array( "type" => "open"),
+  // array( "name" => "General",
+  // "type" => "section"),
+  // array( "type" => "open"),
 
-  array( "name" => "Logo URL",
-  "desc" => "Enter the link to your logo image",
-  "id" => $shortname."_logo",
-  "type" => "text",
-  "std" => ""),
+  // array( "name" => "Logo URL",
+  // "desc" => "Enter the link to your logo image",
+  // "id" => $shortname."_logo",
+  // "type" => "text",
+  // "std" => ""),
 
-  array( "name" => "Custom Favicon",
-  "desc" => "A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image",
-  "id" => $shortname."_favicon",
-  "type" => "text",
-  "std" => get_bloginfo('url') ."/assets/images/favicon.ico"),
-  array( "type" => "close"),
+  // array( "name" => "Custom Favicon",
+  // "desc" => "A favicon is a 16x16 pixel icon that represents your site; paste the URL to a .ico image that you want to use as the image",
+  // "id" => $shortname."_favicon",
+  // "type" => "text",
+  // "std" => get_bloginfo('url') ."/assets/images/favicon.ico"),
+  // array( "type" => "close"),
 
   /* ---------------------------------------------------------
   Home section
   ----------------------------------------------------------- */
-  array( "name" => "Homepage",
-  "type" => "section"),
-  array( "type" => "open"),
-  array( "name" => "Homepage Featured",
-  "desc" => "Choose a category from which featured posts are.",
-  "id" => $shortname."_feat_cat",
-  "type" => "select",
-  "options" => $all_cats,
-  "std" => "Select a category"),
-  array( "type" => "close"),
+  array( 
+    "name" => "Homepage",
+    "type" => "section"),
+  array( 
+    "type" => "open"),
+  array( 
+    "name" => "Quote",
+    "desc" => "",
+    "id" => $shortname."_quote",
+    "type" => "textarea",
+    "options" => $all_cats,
+    "std" => "Discovering and Maximizing Our God-Given TALENTS to Serve The CITY We Are In, and to Bring People to WORSHIP God in Spirit and in Truth"),
+  array( 
+    "type" => "close"),
+
+   /* ---------------------------------------------------------
+  CCW section
+  ----------------------------------------------------------- */
+  array( 
+    "name" => "Creative City Worship Page",
+    "type" => "section"),
+  array( 
+    "type" => "open"),
+  array( 
+    "name" => "Who We Are",
+    "desc" => "",
+    "id" => $shortname."_whoweare",
+    "type" => "textarea",
+    "options" => $all_cats,
+    "std" => "<b>Creative City Worship</b> started with a bunch of people who are passionate about God and passionate to serve others. We strongly believe that our God-given talents should be used to serve the city we are in, so that people can come to know who Jesus is and can worship Him in spirit and in truth. 
+            
+            We started our first <b>Creative City Worship</b> service on November 10th, 2013 with only 12 members. Having only a small amount of volunteers meant that everyone had to multi-task, and on every Sunday one person could have up to 3 ministries! But this has caused us to grow closer to one another and Sunday service became more than just an ordinary church service - it became our extended family gathering to worship God and rejoice in His presence. 
+            
+            Ever since then we've had tremendous miracles in the house of God - new members were added, many volunteered to serve, and we've even been given the opportunity to dedicate 4 young children to God and to baptize our first member on Easter Sunday, 20 April 2014. 
+          
+            We love God wholeheartedly and we pray that many people will be blessed through our ministry. To find out more about us - we welcome you to come visit our Sunday service at 10am.
+         
+            God bless you"),
+  
+  array( 
+    "name" => "Service Address",
+    "desc" => "",
+    "id" => $shortname."_serviceaddress",
+    "type" => "textarea",
+    "options" => $all_cats,
+    "std" => "Weekly Service:
+              Sunday//10AM
+              at ARTSPACE
+              Artotel | Jl.Sunda No 3, Jakarta-Thamrin
+
+              Contact Person :
+              Linda - 087.777.147.525"),
+
+  array( 
+    "name" => "Creative Kids",
+    "desc" => "",
+    "id" => $shortname."_kids",
+    "type" => "textarea",
+    "options" => $all_cats,
+    "std" => "<b>Vision Statement: </b>
+            'To build a generation of children who has a firm foundation in
+            the knowledge of God's Word, has good Christ-based character
+            and are successful in their studies.'
+            
+            <b>Mission Statement: </b>
+            <ol>
+              <li>Providing the truth of God's Word using simple stories and
+                activities that the children will understand.</li>
+              <li>Providing an atmosphere of love and joy every week during 
+                Creative Kids' Sunday service.</li>
+              <li>Enlisting Sunday School volunteers who love God and love 
+                children, who can be good Christian role models for the 
+                children they teach.</li>
+              <li>Praying for the children' studies and giving them support   
+                whenever able to.</li>
+            </ol>"),
+
+  array( 
+    "name" => "Pastor Walter",
+    "desc" => "",
+    "id" => $shortname."_pastor",
+    "type" => "textarea",
+    "options" => $all_cats,
+    "std" => "Being the oldest son of a Pastor, naturally what Walter wanted to be when he grew up, was to be a drummer.
+
+              So during his college years in Melbourne, Australia, Walter formed a pop-rock band named Playground and they played in most Indonesian social events in Melbourne. Playground was a huge success within the local Indonesian community and Walter's love of music and music management grew strong.
+
+              At the same time, Walter also ministered in his local church-Indonesian Praise Center in Melbourne-there he discovered his talent as a Pastor when he became a Cell Group leader. After finishing his studies in Melbourne, Walter came back for good to Jakarta and started full-time ministry as the Youth Pastor at his father's church, GBI Altar Filadelfia, in 2009.
+              When the opportunity came to open a church branch at Artotel-Thamrin, Walter's father appointed him to become the branch's managing Pastor and allowed Walter to re-name and re-conceptualize the branch to suit Walter's calling as a Pastor.
+
+              On November 10th 2013, Creative City Worship opened its first service with Ps. Walter Handojo as its Pastor."),
+
+  array( 
+    "type" => "close"),
+
+  /* ---------------------------------------------------------
+  Contact section
+  ----------------------------------------------------------- */
+  array( 
+    "name" => "Contact Page",
+    "type" => "section"),
+  array( 
+    "type" => "open"),
+  array( 
+    "name" => "Contact Address",
+    "desc" => "",
+    "id" => $shortname."_contactaddress",
+    "type" => "textarea",
+    "options" => $all_cats,
+    "std" => "Weekly Service:
+              Sunday//10AM
+              at ARTSPACE
+              Artotel | Jl.Sunda No 3, Jakarta-Thamrin
+
+              Contact Person :
+              Linda - 087.777.147.525"),
+  array( 
+    "type" => "close"),
+
+  /* ---------------------------------------------------------
+  Social Media section
+  ----------------------------------------------------------- */
+  array( 
+    "name" => "Social Media",
+    "type" => "section"),
+  array( 
+    "type" => "open"),
+  array( 
+    "name" => "Facebook",
+    "desc" => "",
+    "id" => $shortname."_fblink",
+    "type" => "text",
+    "options" => $all_cats,
+    "std" => "Enter the link to your facebook account, example https://www.facebook.com/your_account"),
+  array( 
+    "name" => "Twitter",
+    "desc" => "",
+    "id" => $shortname."_twitlink",
+    "type" => "text",
+    "options" => $all_cats,
+    "std" => "Enter the link to your twitter account, example https://www.twitter.com/your_account"),
+  array( 
+    "name" => "Path",
+    "desc" => "",
+    "id" => $shortname."_pathlink",
+    "type" => "text",
+    "options" => $all_cats,
+    "std" => "Enter the link to your path account, example https://www.path.com/your_account"),
+  array( 
+    "name" => "Instagram",
+    "desc" => "",
+    "id" => $shortname."_instagramlink",
+    "type" => "text",
+    "options" => $all_cats,
+    "std" => "Enter the link to your instagram account, example https://www.instagram.com/your_account"),
+  array( 
+    "type" => "close"),
 
   /* ---------------------------------------------------------
   Footer section
   ----------------------------------------------------------- */
-  array( "name" => "Footer",
-  "type" => "section"),
-  array( "type" => "open"),
-  array( "name" => "Footer Credit",
-  "desc" => "You can customize footer credit on footer area here.",
-  "id" => $shortname."_footer_text",
-  "type" => "text",
-  "std" => ""),
-  array( "type" => "close")
+  array( 
+    "name" => "Footer",
+    "type" => "section"),
+  array( 
+    "type" => "open"),
+  array( 
+    "name" => "Copyright",
+    "desc" => "",
+    "id" => $shortname."_copyright",
+    "type" => "text",
+    "options" => $all_cats,
+    "std" => "Copyright 2014 Creative City Worship. All Right Reserved"),
+  array( 
+    "type" => "close")
 );
+
 /*---------------------------------------------------
 Theme Panel Output
 ----------------------------------------------------*/
@@ -135,16 +289,16 @@ function theme_settings_page() {
     <div id="icon-options-general"></div>
     <h2><?php _e( ' Theme Options' ) //your admin panel title ?></h2>
     <?php
-    if ( $message=='saved' ) echo '<div class="updated settings-error" id="setting-error-settings_updated"> 
-    <p>'.$themename.' settings saved.</strong></p></div>';
-    if ( $message=='reset' ) echo '<div class="updated settings-error" id="setting-error-settings_updated"> 
-    <p>'.$themename.' settings reset.</strong></p></div>';
+    if ( $message=='saved' ) 
+      echo '<div class="updated settings-error" id="setting-error-settings_updated"><p>'.$themename.' settings saved.</strong></p></div>';
+    if ( $message=='reset' ) 
+      echo '<div class="updated settings-error" id="setting-error-settings_updated"><p>'.$themename.' settings reset.</strong></p></div>';
     ?>
-    <ul>
+    <!-- <ul>
       <li>View Documentation |</li>
       <li>Visit Support |</li>
       <li>Theme version 1.0 </li>
-    </ul>
+    </ul> -->
     <div class="content_options">
       <form method="post">
  
@@ -153,72 +307,71 @@ function theme_settings_page() {
         switch ( $value['type'] ) {
        
           case "open": ?>
-          <?php break;
+            <?php break;
          
           case "close": ?>
-          </div>
-          </div><br />
-          <?php break;
+            </div>
+            </div><br />
+            <?php break;
          
           case "title": ?>
-          <div class="message">
-            <p>To easily use the <?php echo $themename;?> theme options, you can use the options below.</p>
-          </div>
-          <?php break;
+            <div class="message">
+              <p>To easily use the <?php echo $themename;?> theme options, you can use the options below.</p>
+            </div>
+            <?php break;
          
           case 'text': ?>
-          <div class="option_input option_text">
-          <label for="<?php echo $value['id']; ?>">
-          <?php echo $value['name']; ?></label>
-          <input id="" type="<?php echo $value['type']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>" />
-          <small><?php echo $value['desc']; ?></small>
-          <div class="clearfix"></div>
-          </div>
-          <?php break;
+            <div class="option_input option_text">
+                <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
+                <input id="" type="<?php echo $value['type']; ?>" name="<?php echo $value['id']; ?>" value="<?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id'])  ); } else { echo $value['std']; } ?>" />
+                <small><?php echo $value['desc']; ?></small>
+                <div class="clearfix"></div>
+            </div>
+            <?php break;
          
           case 'textarea': ?>
-          <div class="option_input option_textarea">
-          <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
-          <textarea name="<?php echo $value['id']; ?>" rows="" cols=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea>
-          <small><?php echo $value['desc']; ?></small>
-          <div class="clearfix"></div>
-          </div>
-          <?php break;
+            <div class="option_input option_textarea">
+            <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
+            <textarea name="<?php echo $value['id']; ?>" rows="" cols=""><?php if ( get_settings( $value['id'] ) != "") { echo stripslashes(get_settings( $value['id']) ); } else { echo $value['std']; } ?></textarea>
+            <small><?php echo $value['desc']; ?></small>
+            <div class="clearfix"></div>
+            </div>
+            <?php break;
          
           case 'select': ?>
-          <div class="option_input option_select">
-          <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
-          <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
-          <?php foreach ($value['options'] as $option) { ?>
-              <option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option>
-          <?php } ?>
-          </select>
-          <small><?php echo $value['desc']; ?></small>
-          <div class="clearfix"></div>
-          </div>
-          <?php break;
+            <div class="option_input option_select">
+            <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
+            <select name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>">
+            <?php foreach ($value['options'] as $option) { ?>
+                <option <?php if (get_settings( $value['id'] ) == $option) { echo 'selected="selected"'; } ?>><?php echo $option; ?></option>
+            <?php } ?>
+            </select>
+            <small><?php echo $value['desc']; ?></small>
+            <div class="clearfix"></div>
+            </div>
+            <?php break;
          
           case "checkbox": ?>
-          <div class="option_input option_checkbox">
-          <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
-          <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?>
-          <input id="<?php echo $value['id']; ?>" type="checkbox" name="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /> 
-          <small><?php echo $value['desc']; ?></small>
-          <div class="clearfix"></div>
-          </div>
-          <?php break;
+            <div class="option_input option_checkbox">
+            <label for="<?php echo $value['id']; ?>"><?php echo $value['name']; ?></label>
+            <?php if(get_option($value['id'])){ $checked = "checked=\"checked\""; }else{ $checked = "";} ?>
+            <input id="<?php echo $value['id']; ?>" type="checkbox" name="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> /> 
+            <small><?php echo $value['desc']; ?></small>
+            <div class="clearfix"></div>
+            </div>
+            <?php break;
          
           case "section": 
-          $i++; ?>
-          <div class="input_section">
-          <div class="input_title">
-            
-            <h3><img src="<?php echo get_template_directory_uri();?>/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?></h3>
-            <span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Save changes" /></span>
-            <div class="clearfix"></div>
-          </div>
-          <div class="all_options">
-          <?php break;
+            $i++; ?>
+              <div class="input_section">
+              <div class="input_title">
+              
+              <h3><img src="<?php echo get_template_directory_uri();?>/assets/images/options.png" alt="">&nbsp;<?php echo $value['name']; ?></h3>
+              <span class="submit"><input name="save<?php echo $i; ?>" type="submit" class="button-primary" value="Save changes" /></span>
+              <div class="clearfix"></div>
+            </div>
+            <div class="all_options">
+            <?php break;
           
         }
       }?>
@@ -233,7 +386,7 @@ function theme_settings_page() {
     </div>
     <div class="footer-credit">
       <center>
-        <p>This theme was made by <a title="anang pratika" href="http://anangpratika.wordpress.com" target="_blank" >Anang Pratika</a>.</p>
+        <!-- <p>This theme was made by <a title="" href="" target="_blank" >Hanzputro</a>.</p> -->
       </center>
     </div>
   </div>
@@ -402,19 +555,18 @@ $message_sent    = "Thanks! Your message has been sent.";
 //user posted variables
 $name = $_POST['message_name'];
 $email = $_POST['message_email'];
-$date = $_POST['date'];
-$place = $_POST['place'];
+$phone = $_POST['phone'];
 $message = $_POST['message_text'];
 $human = $_POST['message_human'];
 
 //php mailer variables
 $to = get_option('admin_email');
 $subject = "Someone sent a message from ".get_bloginfo('name');
-$content_email = $date  . "\r\n" . $place  . "\r\n" . $message  . "\r\n";
+$content_email = $phone  . "\r\n" . $message  . "\r\n";
 $headers = 'From: '. $email . "\r\n" . 'Reply-To: ' . $email . "\r\n";
 
 if (isset($_POST['send--button'])){
-    if(empty($name) || empty($message) || empty($email) || empty($human) || empty($date) || empty($place)){        
+    if(empty($name) || empty($message) || empty($email) || empty($human) || empty($phone)){        
         my_contact_form_generate_response("error", $missing_content);
     }
     else{        
@@ -423,7 +575,7 @@ if (isset($_POST['send--button'])){
                 my_contact_form_generate_response("error", $email_invalid);
             }
             else{
-                if(!empty($name) || !empty($message) || !empty($email) || !empty($human) || !empty($date) || !empty($place)){
+                if(!empty($name) || !empty($message) || !empty($email) || !empty($human) || !empty($phone)){
                     $sent = wp_mail($to, $subject, strip_tags($content_email), $headers);
                     if($sent){
                         my_contact_form_generate_response("success", $message_sent); //message sent!
@@ -439,135 +591,3 @@ if (isset($_POST['send--button'])){
         }
     }
 }
-
-
-
-
-/*********************************************************/
-/*               Social Media Share Setup                */
-/*********************************************************/
-function ds_post_tweet_count( $post_id ) { 
-  // Check for transient
-  if ( ! ( $count = get_transient( 'ds_post_tweet_count' . $post_id ) ) ) { 
-    // Do API call
-    $response = wp_remote_retrieve_body( wp_remote_get( 'https://cdn.api.twitter.com/1/urls/count.json?url=' . urlencode( get_permalink( $post_id ) ) ) ); 
-    // If error in API call, stop and don't store transient
-    if ( is_wp_error( $response ) )
-      return 'error'; 
-    // Decode JSON
-    $json = json_decode( $response ); 
-    // Set total count
-    $count = absint( $json->count ); 
-    // Set transient to expire every 30 minutes
-    set_transient( 'ds_post_tweet_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS ); 
-  } 
- return absint( $count ); 
-}  /** Twitter End */
- 
- 
-/** Get like count from Facebook FQL  */ 
-function ds_post_like_count( $post_id ) { 
-  // Check for transient
-  if ( ! ( $count = get_transient( 'ds_post_like_count' . $post_id ) ) ) { 
-    // Setup query arguments based on post permalink
-    $fql  = "SELECT url, ";
-    //$fql .= "share_count, "; // total shares
-    //$fql .= "like_count, "; // total likes
-    //$fql .= "comment_count, "; // total comments
-    $fql .= "total_count "; // summed total of shares, likes, and comments (fastest query)
-    $fql .= "FROM link_stat WHERE url = '" . get_permalink( $post_id ) . "'"; 
-    // Do API call
-    $response = wp_remote_retrieve_body( wp_remote_get( 'https://api.facebook.com/method/fql.query?format=json&query=' . urlencode( $fql ) ) ); 
-    // If error in API call, stop and don't store transient
-    if ( is_wp_error( $response ) )
-      return 'error'; 
-    // Decode JSON
-    $json = json_decode( $response ); 
-    // Set total count
-    $count = absint( $json[0]->total_count ); 
-    // Set transient to expire every 30 minutes
-    set_transient( 'ds_post_like_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS ); 
-  } 
- return absint( $count ); 
-} /** Facebook End  */
- 
- 
-/** Get share count from Google Plus */ 
-function ds_post_plusone_count($post_id) { 
-  // Check for transient
-  if ( ! ( $count = get_transient( 'ds_post_plus_count' . $post_id ) ) ) {     
-      $args = array(
-              'method' => 'POST',
-              'headers' => array(
-                  // setup content type to JSON 
-                  'Content-Type' => 'application/json'
-              ),
-              // setup POST options to Google API
-              'body' => json_encode(array(
-                  'method' => 'pos.plusones.get',
-                  'id' => 'p',
-                  'method' => 'pos.plusones.get',
-                  'jsonrpc' => '2.0',
-                  'key' => 'p',
-                  'apiVersion' => 'v1',
-                  'params' => array(
-                      'nolog'=>true,
-                      'id'=> get_permalink( $post_id ),
-                      'source'=>'widget',
-                      'userId'=>'@viewer',
-                      'groupId'=>'@self'
-                  ) 
-               )),
-               // disable checking SSL sertificates               
-              'sslverify'=>false
-          );       
-      // retrieves JSON with HTTP POST method for current URL  
-      $json_string = wp_remote_post("https://clients6.google.com/rpc", $args);       
-      if (is_wp_error($json_string)){
-          // return zero if response is error                             
-          return "0";             
-      } else {        
-          $json = json_decode($json_string['body'], true);                    
-          // return count of Google +1 for requsted URL
-          $count = intval( $json['result']['metadata']['globalCounts']['count'] ); 
-      }      
-      // Set transient to expire every 30 minutes
-    set_transient( 'ds_post_plus_count' . $post_id, absint( $count ), 30 * MINUTE_IN_SECONDS );      
-  } 
-  return absint( $count );    
-} /** Google Plus End */ 
-
- 
-/** Markup for Social Media Icons */ 
-function ds_social_media_icons() {  
-  // Get the post ID
-  $post_id = get_the_ID(); ?> 
-  <div class="social-icons-wrap">
-    <ul class="social-icons">
-
-      <!-- Facebook Button-->
-      <li class="social-icon facebook">        
-        <div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button"></div>
-        <!-- <span class="share-count"><?php echo ds_post_like_count( $post_id ); ?></span> -->
-      </li>
-
-      <!-- Twitter Button -->
-      <li class="social-icon pinterest">      
-        <a href="//www.pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>" 
-          data-pin-do="buttonPin" data-pin-config="none" data-pin-color="red">
-            <!-- <i class="fa fa-pinterest"></i> Tweet  --> 
-        </a>
-        <!-- <span class="share-count"><?php echo ds_post_tweet_count( $post_id ); ?></span> -->
-      </li>
-
-      <!-- Google + Button-->
-      <li class="social-icon google-plus">
-        <div class="g-plus" data-action="share" data-annotation="none" data-href="<?php the_permalink(); ?>"></div>
-        <!-- <a onclick="javascript:popupCenter('https://plus.google.com/share?url=<?php the_permalink(); ?>','Share on Google+', '600', '600');return false;" href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="blank">
-            <i class="fa fa-google-plus"></i> Google+
-        </a> -->
-          <!-- <span class="share-count"><?php echo ds_post_plusone_count( $post_id ); ?></span> -->
-      </li>
-    </ul>
-  </div><!-- .social-icons-wrap --> 
-<?php }
