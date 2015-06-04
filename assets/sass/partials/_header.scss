@@ -1,6 +1,8 @@
 
 // header 
-   
+.box-shadow{
+  @include boxshadow( 0px, 0px, 1px, 1px, #ddd);
+}
 .header__wrapper{
   width: 100%;  
   // margin:0 auto;
@@ -12,11 +14,12 @@
 
 .header{
   @include flex();
-  padding:15px 0 5px 0;
+  position:relative;
+  // padding:15px 0 5px 0;
   .header__left{
   }
   .header__right{
-    padding:10px 0 0 0;
+    // padding:10px 0 0 0;
   }
 }
 
@@ -24,13 +27,17 @@ nav{
   text-align:right;
   clear:both;
   ul.menu__sosmed--ul{
-    display: inline-block;
+    @include flex();
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
     margin:0 0;
-    li{
-      float:left;
+    li{      
       margin:0px 4px 0 0;
       a{
 
+      }
+      &:last-child{
+        margin:-4px 0 0 8px;
       }
     }
   }
@@ -38,12 +45,13 @@ nav{
   #menu-header-menu{
     @extend .menu__sosmed--ul;
     margin:8px 0 0 0;
+    z-index: 100;
     li{
-      margin:0px 0 0 40px !important;
+      // margin:0px 0 0 40px !important;
       a{
         position:relative;
         @include delay(0.3s all);
-        text-align: center;
+        // text-align: center;
         @extend h3;
         &:before{
           @include delay(0.3s all);
@@ -54,13 +62,6 @@ nav{
           bottom:-4px;
           left:0;
           border-bottom:3px solid #aaa;
-        }                
-        &:hover{
-          &:before{
-            opacity:1;
-            width:100%;
-            border-bottom:3px solid #aaa;
-          } 
         }
       }
     }
@@ -69,8 +70,11 @@ nav{
 
 .responsive__wrapper{
   position: relative;
+  float:right;
   cursor:pointer;
-  padding:5px 10px;
+  width:40px;
+  height:33px;
+  // padding:5px 10px;
   background:#eee;
   text-align:left;
   &:before{
@@ -83,9 +87,15 @@ nav{
     height:11px;
   }
 }
-
-.menu-header-menu-container{
-
+.active__responsive{
+  @include delay(0.3s all);
+  @include noflicker();  
+  opacity:1 !important;
+  visibility: visible !important;
+  right:0 !important;
+  ul{
+    @extend .box-shadow;
+  }
 }
 
 /** responsive **/
@@ -93,19 +103,118 @@ nav{
 /* (0px above)----------- */
 @media only screen 
 and (min-width : 0px) {
+  .header{
+    padding:15px 0 0 0;
+    .header__left{
+      margin-top:-10px;
+      .logo__header{
+        width:60px;
+      }
+    }
+    .header__right{
+      padding:8px 0 0 0;
+    }
+  }
+  
+  .responsive__wrapper{
+    @include delay(0.4s all);
+    display: inline-block;
+  }
+  .menu-header-menu-container{
+    @include delay(0.4s all);
+    opacity:0;
+    position:absolute;    
+    visibility: hidden;
+    top:0;
+    right:-50px;
+    z-index: 100;
+  }
+  ul.menubar--ul,#menu-header-menu{
+    position:absolute;
+    width:280px;    
+    top:60px;
+    right:0;   
+    flex-flow:column wrap !important;
+    -webkit-flex-flow:column wrap !important;    
+    li{
+      background:#eee;
+      padding:0 8px;
+      border-bottom:1px solid #fff;
+      margin:0px 0 0 0px !important;
+      a{
+      display: inline-block;
+      text-align:right;
+      margin:0 0 5px 0 !important;
+      }
+    }
+  }
 }
 
 /* (768px above)----------- */
 @media only screen 
-and (min-width : 768px) {
-  .responsive__wrapper{
-    display: none;
-  }
+and (min-width : 768px) {   
 }
 
 /* (1024px above)----------- */
 @media only screen 
 and (min-width : 1024px) {
+  .header{
+    padding:15px 0 5px 0;
+    .header__left{
+      margin-top:0px;
+      .logo__header{
+        width:inherit;
+      }
+    }
+    .header__right{
+      padding:10px 0 0 0;
+    }
+  }
+  
+  .responsive__wrapper{
+    display: none;
+  }
+  .menu-header-menu-container{
+    opacity:1;
+    width:inherit;
+    visibility: visible;
+    z-index: 100;
+    right:0;
+  }
+  ul.menubar--ul,#menu-header-menu{
+    // position:relative;
+    width:600px;
+    flex-flow:row wrap !important;
+    -webkit-flex-flow:row wrap !important;
+    li {
+      background:transparent;
+      padding:0;
+      border:none;
+      margin:0px 0 0 40px !important;      
+      a{
+      display: block;
+      text-align:center;
+      margin:0 0 15px 0 !important;
+      &:hover{
+          &:before{
+            opacity:1;
+            width:100%;
+            border-bottom:3px solid #aaa;
+          } 
+        }
+      }
+    }
+  }
+  ul.menu__sosmed--ul{
+    li{
+      &:nth-child(4){
+        margin-right:0;
+      }
+      &:nth-child(5){
+        display: none;
+      }
+    }
+  }
 }
 
 /* (1360px above)----------- */

@@ -4,6 +4,15 @@
  */
 
 /*********************************************************/
+/*                fix backslashes Annoyed                */
+/*********************************************************/
+$_POST = array_map( 'stripslashes_deep', $_POST );
+$_GET = array_map( 'stripslashes_deep', $_GET );
+$_COOKIE = array_map( 'stripslashes_deep', $_COOKIE );
+$_REQUEST = array_map( 'stripslashes_deep', $_REQUEST );
+
+
+/*********************************************************/
 /*                      theme setup                     */
 /*********************************************************/
 function theme_setup() {
@@ -144,9 +153,9 @@ $theme_options = array (
     "type" => "textarea",
     "options" => $all_cats,
     "std" => "<b>Vision Statement: </b>
-            'To build a generation of children who has a firm foundation in
+            &quot;To build a generation of children who has a firm foundation in
             the knowledge of God's Word, has good Christ-based character
-            and are successful in their studies.'
+            and are successful in their studies.&quot;
             
             <b>Mission Statement: </b>
             <ol>
@@ -213,32 +222,32 @@ $theme_options = array (
     "type" => "open"),
   array( 
     "name" => "Facebook",
-    "desc" => "",
+    "desc" => "Enter the link to your facebook account",
     "id" => $shortname."_fblink",
     "type" => "text",
     "options" => $all_cats,
-    "std" => "Enter the link to your facebook account, example https://www.facebook.com/your_account"),
+    "std" => "https://www.facebook.com/your_account"),
   array( 
     "name" => "Twitter",
-    "desc" => "",
+    "desc" => "Enter the link to your twitter account",
     "id" => $shortname."_twitlink",
     "type" => "text",
     "options" => $all_cats,
-    "std" => "Enter the link to your twitter account, example https://www.twitter.com/your_account"),
+    "std" => "https://www.twitter.com/your_account"),
   array( 
     "name" => "Path",
-    "desc" => "",
+    "desc" => "Enter the link to your path account",
     "id" => $shortname."_pathlink",
     "type" => "text",
     "options" => $all_cats,
-    "std" => "Enter the link to your path account, example https://www.path.com/your_account"),
+    "std" => "https://www.path.com/your_account"),
   array( 
     "name" => "Instagram",
-    "desc" => "",
+    "desc" => "Enter the link to your instagram account",
     "id" => $shortname."_instagramlink",
     "type" => "text",
     "options" => $all_cats,
-    "std" => "Enter the link to your instagram account, example https://www.instagram.com/your_account"),
+    "std" => "https://www.instagram.com/your_account"),
   array( 
     "type" => "close"),
 
@@ -316,7 +325,7 @@ function theme_settings_page() {
          
           case "title": ?>
             <div class="message">
-              <p>To easily use the <?php echo $themename;?> theme options, you can use the options below.</p>
+              <!-- <p>To easily use the <?php echo $themename;?> theme options, you can use the options below.</p> -->
             </div>
             <?php break;
          

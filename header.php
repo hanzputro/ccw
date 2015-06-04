@@ -34,14 +34,15 @@
 				<div class="header__left">
 					<a href="<?php echo site_url(); ?>"><img class="logo__header" src="<?php bloginfo('template_url'); ?>/assets/images/logo.png"></img></a>
 				</div>
-				<div class="header__right">
+				<div class="header__right">					
 					<nav>
 						<ul class="menu__sosmed--ul">
-							<li class=""><a href="#" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/fb.png" alt=""></a></li>
-							<li class=""><a href="#" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/twit.png" alt=""></a></li>
-							<li class=""><a href="#" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/path.png" alt=""></a></li>
-							<li class=""><a href="#" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/instagram.png" alt=""></a></li>
-						</ul>
+							<li class=""><a href="<?php echo get_option('shortname_fblink');?>" target="_blank" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/fb.png" alt=""></a></li>
+							<li class=""><a href="<?php echo get_option('shortname_twitlink');?>" target="_blank" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/twit.png" alt=""></a></li>
+							<li class=""><a href="<?php echo get_option('shortname_pathlink');?>" target="_blank" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/path.png" alt=""></a></li>
+							<li class=""><a href="<?php echo get_option('shortname_instagramlink');?>" target="_blank" class=""><img src="<?php bloginfo('template_url'); ?>/assets/images/instagram.png" alt=""></a></li>
+							<li class=""><div class="responsive__wrapper"></div></li>
+						</ul>						
 					</nav>	
 					<nav>
 						<!-- <ul class="menubar--ul">

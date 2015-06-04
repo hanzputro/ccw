@@ -24,8 +24,15 @@ $(document).ready(function(){
     });
 
     //////////// toggle menu responsive
-    $('.responsive__wrapper').click(function(){
-        $(".menu-header-menu-container").fadeToggle();
+    $('.responsive__wrapper').click(function(){        
+        if($(".menu-header-menu-container").hasClass("active__responsive")&&($(".responsive__wrapper").hasClass("box-shadow"))){
+            $(".responsive__wrapper").removeClass("box-shadow");
+            $(".menu-header-menu-container").removeClass("active__responsive");
+        }
+        else{
+            $(".responsive__wrapper").addClass("box-shadow");
+            $(".menu-header-menu-container").addClass("active__responsive");
+        }
     });
 
     //////////// toggle comment
